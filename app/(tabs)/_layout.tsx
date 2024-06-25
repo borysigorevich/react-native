@@ -14,41 +14,48 @@ export default function TabLayout() {
             }}
         >
             <Tabs.Screen
-                name="index"
+                name="stylesheet"
                 options={{
-                    title: 'View/ScrollView',
+                    title: 'Stylesheet',
                 }}
+
             />
-            <Tabs.Screen
-                name="buttons"
-                options={{
-                    title: 'Buttons',
-                }}
-            />
-            <Tabs.Screen
-                name="modals"
-                options={{
-                    title: 'Modals',
-                }}
-            />
-            <Tabs.Screen
-                name="status-bar"
-                options={{
-                    title: 'Status Bar',
-                }}
-            />
-            <Tabs.Screen
-                name="alert"
-                options={{
-                    title: 'Alert',
-                }}
-            />
-            <Tabs.Screen
-                name="explore"
-                options={{
-                    title: 'Explore',
-                }}
-            />
+            {/*<Tabs.Screen*/}
+            {/*    name="index"*/}
+            {/*    options={{*/}
+            {/*        title: 'View/ScrollView',*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Tabs.Screen*/}
+            {/*    name="buttons"*/}
+            {/*    options={{*/}
+            {/*        title: 'Buttons',*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Tabs.Screen*/}
+            {/*    name="modals"*/}
+            {/*    options={{*/}
+            {/*        title: 'Modals',*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Tabs.Screen*/}
+            {/*    name="status-bar"*/}
+            {/*    options={{*/}
+            {/*        title: 'Status Bar',*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Tabs.Screen*/}
+            {/*    name="alert"*/}
+            {/*    options={{*/}
+            {/*        title: 'Alert',*/}
+            {/*    }}*/}
+            {/*/>*/}
+            {/*<Tabs.Screen*/}
+            {/*    name="explore"*/}
+            {/*    options={{*/}
+            {/*        title: 'Explore',*/}
+            {/*    }}*/}
+            {/*/>*/}
         </Tabs>
     );
 }

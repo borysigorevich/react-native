@@ -1,3 +1,4 @@
+import {Grid} from "@/components/Grid";
 import {Image, ImageBackground, ScrollView, StyleSheet, Text, View} from 'react-native';
 // @ts-ignore
 import adaptiveIcon from '../../assets/images/adaptive-icon.png';
@@ -15,7 +16,11 @@ export default function HomeScreen() {
                     height: 100,
                     backgroundColor: 'cyan'
                 }}>
-                    <Text>Nested View</Text>
+                    <Grid
+                        name={'Grid'}
+                    /><Grid
+                        name={'Grid 1'}
+                    />
                 </View>
                     <Image
                         source={{
