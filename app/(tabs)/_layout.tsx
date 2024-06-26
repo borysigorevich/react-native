@@ -18,14 +18,20 @@ export default function TabLayout() {
                 options={{
                     title: 'Stylesheet',
                 }}
-
             />
-            {/*<Tabs.Screen*/}
-            {/*    name="index"*/}
-            {/*    options={{*/}
-            {/*        title: 'View/ScrollView',*/}
-            {/*    }}*/}
-            {/*/>*/}
+            <Tabs.Screen
+                name="index"
+                options={{
+                    title: 'View/ScrollView',
+                }}
+            />
+
+            <Tabs.Screen
+                name="flex"
+                options={{
+                    title: 'Flex',
+                }}
+            />
             {/*<Tabs.Screen*/}
             {/*    name="buttons"*/}
             {/*    options={{*/}

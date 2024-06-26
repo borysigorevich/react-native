@@ -6,11 +6,11 @@ const StylesheetPage = () => {
         <View
             style={styles.container}
         >
-            <View style={[styles.box, styles.blueBox]}>
+            <View style={[styles.box, styles.blueBox, styles.boxShadow]}>
                 <Text>Blue box</Text>
             </View>
 
-            <View style={[styles.box, styles.greenBox]}>
+            <View style={[styles.box, styles.greenBox, styles.boxShadow]}>
                 <Text>Green box</Text>
             </View>
         </View>
@@ -43,5 +43,15 @@ const styles = StyleSheet.create({
     },
     blueBox: {
         backgroundColor: 'blue'
+    },
+    boxShadow: {
+        shadowColor: 'blue',
+        shadowOffset: {
+            width: 0,
+            height: 10
+        },
+        shadowOpacity: 0.9,
+        shadowRadius: 10,
+        elevation: 25
     }
 })
