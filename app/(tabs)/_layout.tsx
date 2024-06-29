@@ -81,6 +81,26 @@ export default function TabLayout() {
                     href: null,
                 }}
             />
+            <Tabs.Screen
+                name="dynamic-ui"
+                options={{
+                    title: 'Dynamic UI',
+                    href: null,
+                }}
+            />
+            <Tabs.Screen
+                name="pokemons"
+                options={{
+                    title: 'Pokemons',
+                    href: null,
+                }}
+            />
+            <Tabs.Screen
+                name="lists"
+                options={{
+                    title: 'Lists',
+                }}
+            />
         </Tabs>
     );
 }
