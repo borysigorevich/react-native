@@ -19,7 +19,7 @@ export default function TabLayout() {
 
     return (
         <Tabs
-            screenOptions={({route, }) => ({
+            screenOptions={({route,}) => ({
                 tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
                 headerShown: false,
             })}
@@ -99,6 +99,19 @@ export default function TabLayout() {
                 name="lists"
                 options={{
                     title: 'Lists',
+                    href: null
+                }}
+            />
+            <Tabs.Screen
+                name="inputs"
+                options={{
+                    title: 'Inputs',
+                }}
+            />
+            <Tabs.Screen
+                name="login-form"
+                options={{
+                    title: 'Login Form',
                 }}
             />
         </Tabs>
