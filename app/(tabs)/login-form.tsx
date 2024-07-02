@@ -12,10 +12,41 @@ import {
     View
 } from "react-native";
 
+type ErrorsType = {
+    username?: string,
+    password?: string
+}
+
 const LoginForm = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+
+    const [errors, setErrors] = useState<ErrorsType>({})
+
+    const validateForm = () => {
+        const errors = {} as ErrorsType
+
+        if (!username) {
+            errors.username = 'Username is required'
+        }
+
+        if (!password) {
+            errors.password = 'Password is required'
+        }
+
+        setErrors(errors)
+
+        return Object.keys(errors).length === 0
+    }
+
+    const handleSubmit = () => {
+        if (validateForm()) {
+            setUsername('')
+            setPassword('')
+            setErrors({})
+        }
+    }
 
     return (
         <SafeAreaView
@@ -41,6 +72,8 @@ const LoginForm = () => {
                         placeholder={'Enter your username'}
                     />
 
+                    {errors.username && <Text style={styles.errorText}>{errors.username}</Text>}
+
                     <Text style={styles.label}>Password: </Text>
                     <TextInput
                         secureTextEntry
@@ -50,8 +83,11 @@ const LoginForm = () => {
                         placeholder={'Enter your password'}
                     />
 
+                    {errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
+
                     <Button
                         title={'Login'}
+                        onPress={handleSubmit}
                     />
                 </View>
             </KeyboardAvoidingView>
@@ -93,7 +129,11 @@ const styles = StyleSheet.create({
         borderColor: '#ddd',
         borderRadius: 5,
         padding: 10,
-        marginBottom: 24,
+        marginBottom: 10,
+    },
+    errorText: {
+        color: 'red',
+        marginBottom: 24
     },
     image: {
         width: 200,
