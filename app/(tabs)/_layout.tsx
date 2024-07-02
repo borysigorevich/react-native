@@ -114,6 +114,12 @@ export default function TabLayout() {
                     title: 'Login Form',
                 }}
             />
+            <Tabs.Screen
+                name="api-requests"
+                options={{
+                    title: 'API Requests',
+                }}
+            />
         </Tabs>
     );
 }
